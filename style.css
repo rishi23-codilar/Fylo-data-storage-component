@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Josefin+Sans&family=Outfit:wght@300;400;600&family=Raleway:wght@400;700&family=Red+Hat+Display:wght@500;700;900&family=Rubik:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 1rem;
+}
+.fylo {
+    background-color: hsl(228, 56%, 26%);
+    width: 86%;
+    border-radius: 10px;
+}
+.logo-container {
+    padding: 3rem;
+    border-top-right-radius: 10rem;
+}
+.logo-elements-container {
+    display: flex;
+    flex-direction: row;
+    /* padding: 1rem; */
+    gap: 1.5rem;
+    margin-top: 2rem;
+    /* justify-content: center;
+    align-items: center; */
+}
+.element-btn {
+    background-color: hsl(229, 57%, 11%);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.storage-container {
+    padding: 2rem 2rem 3rem 2rem;
+    position: relative;
+}
+.line {
+    color: hsl(243, 100%, 93%);
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    text-align: center;
+}
+.storage-bar {
+    background-color: hsl(229, 57%, 11%);
+    width: 100%;
+    border-radius: 25px;
+    padding: 2px;
+    margin: 1.8rem 0 1rem 0;
+}
+.storage-bar-color {
+    width: 75%;
+    background-image: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.storage-bar-pointer {
+    width: 1rem;
+    height: 1rem;
+    background-color: hsl(243, 100%, 93%);
+    border-radius: 1rem;
+    padding: 1px;
+}
+.text-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.text {
+    color: hsl(243, 100%, 93%);
+    font-size: 12px;
+    font-weight: 700;
+}
+.message-container {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    /* border: 1px solid yellow; */
+    /* border-radius: 10px; */
+}
+.message {
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.message strong {
+    font-size: 40px;
+    font-weight: 700;
+    color: hsl(229, 57%, 11%);
+}
+.message span {
+    font-size: 11px;
+    font-weight: 700;
+    color: hsl(229, 7%, 55%);
+    margin-left: 4px;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1440px){
+    body {
+        width: 100%;
+        background-image: url('./images/bg-desktop.png');
+        background-size: contain;
+        background-position-y: bottom;
+        background-color: hsl(229, 57%, 11%);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-container{
+        /* display: flex; */
+        flex-direction: row;
+        /* justify-content: center; */
+        align-items: flex-end;
+        height: fit-content;
+        width: 65%;
+        gap: 2rem;
+    }
+    .logo-container {
+        width: 40%;
+    }
+    .storage-container{
+        width: 60%;
+        padding: 2rem 3rem;
+    }
+    .line {
+        text-align: left;
+    }
+    .message-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        left: unset;
+        top: -25%;
+        right: 10%;
+    }
+    .message {
+        border-bottom-right-radius: 0;
+        left: 0;
+    }
+    .triangle {
+        display: block;
+        width: 0;
+        height: 0;
+        margin-top: -1.5px;
+        border-top: 10px solid #fff;
+        border-right: 10px solid #fff;
+        border-left: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+    }
+}
